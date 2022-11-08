@@ -77,7 +77,6 @@ function draw() {
     {
        jungle.x=400
     }
-   console.log(kangaroo.y)
     if(keyDown("space")&& kangaroo.y>270) {
       jumpSound.play();
       kangaroo.velocityY = -16;
@@ -138,7 +137,7 @@ function draw() {
   fill("black")
   text("Score: "+ score, camera.position.x,50);
   
-  if(score >= 5){
+  if(score >= 20){
     kangaroo.visible = false;
     textSize(30);
     stroke(3);
@@ -192,42 +191,6 @@ function spawnObstacles() {
     
   }
 }
-
-/*function reset(){
-  gameState = PLAY;
-  gameOver.visible = true;
-  restart.visible = true;
-  kangaroo.visible = true;
-  kangaroo.changeAnimation("running",
-                kangaroo_running);
-  obstaclesGroup.Each();
-  shrubsGroup.destroyEach();
-  score = 0;
-}*/
-
-/*function reset(){
-  gameState = PLAY;
-  gameOver.visible = false;
-  restart.visible = false;
-  kangaroo.visible = true;
-  kangaroo.changeAnimation("running",
-               kangaroo_running);
-  obstaclesGroup.destroyEach();
-  shrubsGroup.destroyEach();
-
-}*/
-
-/*function reset(){
-  gameState = PLAY;
-  gameOver.visible = false;
-  restart.visible = false;
-  kangaroo.visible = false;
-  kangaroo.changeAnimation("running",
-               kangaroo_running);
-  obstaclesGroup.destroyeach();
-  shrubsGroup.destroyeach();
-  score = 0;
-}*/
 
 function reset(){
   gameState = PLAY;
